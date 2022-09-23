@@ -34,7 +34,7 @@ for i = 1:nLegs
     ForceS.(forcename) = HuntCrossleyForce();
     ForceS.(forcename).setName(forcename);
     ForceS.(forcename).addGeometry(contactname);
-    ForceS.(forcename).addGeometry('PlatformContact');
+    ForceS.(forcename).addGeometry(contactSpaceName);
     ForceS.(forcename).setStiffness(stiffness);
     ForceS.(forcename).setDissipation(dissipation);
     ForceS.(forcename).setStaticFriction(staticFriction);
