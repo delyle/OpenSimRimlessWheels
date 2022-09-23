@@ -104,22 +104,38 @@ osimModel.addBody(pelvis);
 pelvisToPlatform = FreeJoint('PelvisToPlatform', platform, pelvis);
 
 % Update the coordinates of the new joint
+Pelvis_rx = pelvisToPlatform.upd_coordinates(0); % Rotation about x
+Pelvis_rx.setRange([-pi, pi]);
+Pelvis_rx.setName('Pelvis_rx');
+Pelvis_rx.setDefaultValue(0);
+
+Pelvis_ry = pelvisToPlatform.upd_coordinates(1); % Rotation about y
+Pelvis_ry.setRange([-pi, pi]);
+Pelvis_ry.setName('Pelvis_ry');
+Pelvis_ry.setDefaultValue(0);
+
 Pelvis_rz = pelvisToPlatform.upd_coordinates(2); % Rotation about z
 Pelvis_rz.setRange([-pi, pi]);
 Pelvis_rz.setName('Pelvis_rz');
 Pelvis_rz.setDefaultValue(0);
 
-Pelvis_tx = pelvisToPlatform.upd_coordinates(3); % Translation about x
+Pelvis_tx = pelvisToPlatform.upd_coordinates(3); % Translation along x
 Pelvis_tx.setRange([-10, 10]);
 Pelvis_tx.setName('Pelvis_tx');
 Pelvis_tx.setDefaultValue(-10);
 Pelvis_tx.setDefaultSpeedValue(initialSpeed)
  
-Pelvis_ty = pelvisToPlatform.upd_coordinates(4); % Translation about y
+Pelvis_ty = pelvisToPlatform.upd_coordinates(4); % Translation along y
 Pelvis_ty.setRange([-5,5]);
 Pelvis_ty.setName('Pelvis_ty');
 Pelvis_ty.setDefaultValue(legLength+0.1);
 Pelvis_ty.setDefaultSpeedValue(0)
+
+Pelvis_tz = pelvisToPlatform.upd_coordinates(5); % Translation along z
+Pelvis_tz.setRange([-1,1]);
+Pelvis_tz.setName('Pelvis_tz');
+Pelvis_tz.setDefaultValue(0);
+Pelvis_tz.setDefaultSpeedValue(0)
 
 % Add Joint to model
 osimModel.addJoint(pelvisToPlatform)
