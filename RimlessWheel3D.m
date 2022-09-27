@@ -14,14 +14,10 @@ torsoMass = 10;
 torsoLength = 1.5;
 contactSphereRadius = 0.05;
 rampHeightOffset = 5;
-rampInitialAngle = -10; % in degrees.
 
-reorientGravity = true; % if true, there is no platform joint. Gravity is reoriented according to the platform angle.
-lockOffPlanar = false; % if true, extra DOF that aren't in the sagittal plane are locked.
-
-nRightLegs = 6;
-nLeftLegs = 6;
-angleOffsetRight = 30;
+nRightLegs = 3;
+nLeftLegs = 3;
+angleOffsetRight = 60;
 angleOffsetLeft = 0;
 
 initialSpeed = 0.1;
@@ -112,13 +108,11 @@ Pelvis_rx = pelvisToPlatform.upd_coordinates(0); % Rotation about x
 Pelvis_rx.setRange([-pi, pi]);
 Pelvis_rx.setName('Pelvis_rx');
 Pelvis_rx.setDefaultValue(0);
-Pelvis_rx.setDefaultLocked(lockOffPlanar);
 
 Pelvis_ry = pelvisToPlatform.upd_coordinates(1); % Rotation about y
 Pelvis_ry.setRange([-pi, pi]);
 Pelvis_ry.setName('Pelvis_ry');
 Pelvis_ry.setDefaultValue(0);
-Pelvis_ry.setDefaultLocked(lockOffPlanar);
 
 Pelvis_rz = pelvisToPlatform.upd_coordinates(2); % Rotation about z
 Pelvis_rz.setRange([-pi, pi]);
@@ -142,7 +136,6 @@ Pelvis_tz.setRange([-1,1]);
 Pelvis_tz.setName('Pelvis_tz');
 Pelvis_tz.setDefaultValue(0);
 Pelvis_tz.setDefaultSpeedValue(0)
-Pelvis_tz.setDefaultLocked(true)
 
 % Add Joint to model
 osimModel.addJoint(pelvisToPlatform)

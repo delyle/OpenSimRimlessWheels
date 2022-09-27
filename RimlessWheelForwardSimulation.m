@@ -14,7 +14,7 @@ end
 % set default options
 fieldNames = fieldnames(options);
 reqFieldsAndDefaults = {'endTime',5,'stepSize',0.001,'integrator',1,...
-    'accuracy',0.001,'useVis',false,'reportInterval',0.01,'lockedCoords',{}};
+    'accuracy',0.001,'useVis',false,'reportInterval',0.01};
 reqFields = reqFieldsAndDefaults(1:2:end);
 reqDefaults = reqFieldsAndDefaults(2:2:end);
 
@@ -35,30 +35,21 @@ reporter.setName('reporter');
 reporter.set_report_time_interval(options.reportInterval);
 osimModel.addComponent(reporter);
 
-if ~isempty(options.lockedCoords)
-    coordSet = osimModel.updCoordinateSet();
-    for i = 1:length(options.lockedCoords)
-       coordSet.get(options.lockedCoords{i}).setDefaultLocked(true); 
-    end
-end
-
 % Initialize the underlying computational system and get a reference to
 % the system state.
 state = osimModel.initSystem();
 
 % initialize the coordinates
-
 if ~isempty(initCoords)
-    if exist('coordSet','var') ~= 1
-        coordSet = osimModel.updCoordinateSet();
-    end
     coordNames = initCoords(1:3:end);
     coordValues = initCoords(2:3:end);
     coordSpeeds = initCoords(3:3:end);
+    coordSet = osimModel.updCoordinateSet();
     for i = 1:length(coordNames)
         coordSet.get(coordNames{i}).setValue(state, coordValues{i});
         coordSet.get(coordNames{i}).setSpeedValue(state, coordSpeeds{i});
     end
+    
 end
 
 
@@ -143,6 +134,14 @@ fprintf('Took %.4f s\n',toc)
 fieldNames = fieldnames(simData);
 
 fieldNames(strcmp('time',fieldNames)) = [];
+
+for i = 1:length(fieldNames)
+    oldField = fieldNames{i};
+    splt = strsplit(oldField,'_');
+    newField = strjoin(splt(end-2:end),'_');
+    simData.(newField) = simData.(oldField);
+    simData = rmfield(simData,oldField);
+end
 
 simData.SimulationTime = htoc;
 
