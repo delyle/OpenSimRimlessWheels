@@ -12,7 +12,7 @@ legLength = 0.50;
 legWidth = 0.05;
 torsoMass = 10;
 torsoLength = 1.5;
-contactSphereRadius = 0.05;
+contactSphereRadius = 0.025;
 rampHeightOffset = 5;
 rampInitialAngle = -10; % in degrees.
 
