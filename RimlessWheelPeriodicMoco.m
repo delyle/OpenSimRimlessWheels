@@ -40,7 +40,7 @@ periodicityGoal.addStatePair(MocoPeriodicityGoalPair([p2g,'tx','/speed']));
 
 % Configure Solver
 solver = study.initCasADiSolver();
-solver.set_num_mesh_intervals(10);
+solver.set_num_mesh_intervals(15);
 
 solution = study.solve();
 

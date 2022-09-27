@@ -162,7 +162,6 @@ Pelvis_tz.setRange([-1,1]);
 Pelvis_tz.setName('Pelvis_tz');
 Pelvis_tz.setDefaultValue(0);
 Pelvis_tz.setDefaultSpeedValue(0)
-Pelvis_tz.setDefaultLocked(true)
 
 % Add Joint to model
 osimModel.addJoint(pelvisToPlatform)
