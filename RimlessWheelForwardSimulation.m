@@ -89,7 +89,7 @@ end
 %state = osimModel.initSystem();
 
 htic = tic;
-disp('Running forward tool')
+fprintf('Running forward tool... ')
 manager = Manager(osimModel);
 state.setTime(0);
 manager.initialize(state);
@@ -97,13 +97,13 @@ manager.setIntegratorMinimumStepSize(options.stepSize)
 state = manager.integrate(options.endTime);
 htoc = toc(htic);
 
-fprintf('Forward Tool Finished in %.1f s\n',htoc);
+fprintf('Took %.1f s\n',htoc);
 % Get the states table from the manager and print the results.
 
 %fTable = forceReport.getForcesTable(); % doesn't work...
 
 tic;
-disp('Getting states from trajectory reporter')
+fprintf('Getting states from trajectory reporter... ')
 statesTraj = reporter.getStates();
 sTable = statesTraj.exportToTable(osimModel);
 fprintf('Took %.4f s\n',toc)
@@ -111,12 +111,13 @@ fprintf('Took %.4f s\n',toc)
 %% Write results to .sto
 if saveName
 stofiles = STOFileAdapter();
-fprintf('Writing table to %s\n',[saveName,'.sto'])
+fprintf('Writing table to %s... ',[saveName,'.sto'])
 stofiles.write(sTable, [saveName,'.sto']);
 
 % rewrite first line from "states" to something more informative
 newHeaderName = ['states',saveName];
 rewriteLine([saveName,'.sto'],newHeaderName,1);
+fprintf('Done\n');
 end
 
 %% Convert the Data to matlab format
@@ -124,25 +125,24 @@ end
 % first get table column labels; these will be in a format like
 % '/jointset/joint/coordname/value'
 % which is a bad format for osimTableToStruct and will generate pesky warnings.
-% The code below will convert the labels to 'coordname_value'
+% The code below will convert the labels to 'coordname_value', and save the
+% old names to the data struct
+
+simData = struct();
 nLabels = sTable.getNumColumns();
 for i = 0:nLabels-1
     curLabel = char(sTable.getColumnLabel(i));
     labelParts = strsplit(curLabel,'/');
     newLabel = strjoin(labelParts(end-1:end),'_');
     sTable.setColumnLabel(i,newLabel);
+    
+    simData.columnLabels.(newLabel) = curLabel;
 end
 
-fprintf('Writing Table to Matlab Structure\n')
+fprintf('Writing Table to Matlab Structure... ')
 tic;
-simData = osimTableToStruct(sTable);
+simData.data = osimTableToStruct(sTable);
 fprintf('Took %.4f s\n',toc)
-
-% rename the data to a more readable format
-
-fieldNames = fieldnames(simData);
-
-fieldNames(strcmp('time',fieldNames)) = [];
 
 simData.SimulationTime = htoc;
 
