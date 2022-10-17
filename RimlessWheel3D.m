@@ -19,9 +19,9 @@ rampInitialAngle = -10; % in degrees.
 reorientGravity = true; % if true, there is no platform joint. Gravity is reoriented according to the platform angle.
 lockOffPlanar = false; % if true, extra DOF that aren't in the sagittal plane are locked.
 
-nRightLegs = 6;
-nLeftLegs = 6;
-angleOffsetRight = 30;
+nRightLegs = 12;
+nLeftLegs = 12;
+angleOffsetRight = 0;
 angleOffsetLeft = 0;
 
 initialSpeed = 0.1;

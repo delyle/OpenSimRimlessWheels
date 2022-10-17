@@ -4,6 +4,9 @@ fName = '3DRimlessWheel.osim';
 
 % set default coordinate values to initial values of period in a planar
 % forward simulation
-RimlessWheelMakePlanarGuess(fName,pi/3);
+finalAngle = pi/6;
 
-RimlessWheelPeriodicMoco(fName,-360/6*pi/180)
+RimlessWheelMakePlanarGuess(fName,finalAngle);
+
+
+RimlessWheelPeriodicMoco(fName,-2*finalAngle)
