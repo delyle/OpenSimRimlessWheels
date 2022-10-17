@@ -74,6 +74,17 @@ stofiles = STOFileAdapter();
 savename = [strrep(fNameNew,'.osim',''),'_planarCycle.sto'];
 fprintf('Writing table to %s\n',savename)
 stofiles.write(table, savename);
+
+% rewrite so that header includes number of states
+mocoHeader = [...
+    "num_controls=0";
+    "num_derivatives=0";
+    "num_multipliers=0";
+    "num_parameters=0";
+    "num_slacks=0";
+    "num_states=12"];
+updateHeader(savename,mocoHeader);
+
 fprintf('Done\n')
 
 

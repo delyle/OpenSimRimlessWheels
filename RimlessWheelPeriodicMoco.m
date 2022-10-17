@@ -17,10 +17,12 @@ problem.setTimeBounds(MocoInitialBounds(0.),MocoFinalBounds(0.001, 1));
 p2g = '/jointset/PelvisToGround/Pelvis_';
 problem.setStateInfo([p2g,'tx/value'],[0 5],[0],[0 5]);
 problem.setStateInfo('/jointset/PelvisToGround/Pelvis_tx/speed',[0 5],[0 5],[0 5]);
-problem.setStateInfo('/jointset/PelvisToGround/Pelvis_rz/value',pi/2*[-1 1],0,finalAngle);
+problem.setStateInfo('/jointset/PelvisToGround/Pelvis_rz/value',sort([0 finalAngle]),0,finalAngle);
 
 
 % could put in bounds for other states...
+%problem.setStateInfo('/jointset/PelvisToGround/Pelvis_rx/value',pi/3*[-1 1],pi/3*[-1 1],pi/3*[-1 1]);
+
 
 % Cost, minimize periodicity residuals
 
@@ -41,6 +43,7 @@ periodicityGoal.addStatePair(MocoPeriodicityGoalPair([p2g,'tx','/speed']));
 % Configure Solver
 solver = study.initCasADiSolver();
 solver.set_num_mesh_intervals(15);
+solver.setGuessFile('3DRimlessWheel_planarCycle.sto')
 
 solution = study.solve();
 
