@@ -110,6 +110,7 @@ else
     groundContactSpace.setName(contactSpaceName);
     osimModel.addContactGeometry(groundContactSpace); 
 end
+
 %%
 % Make and add a Pelvis Body
 pelvis = Body();
@@ -123,48 +124,49 @@ osimModel.addBody(pelvis);
 
 % Make and add a free joint for the Pelvis Body
 if reorientGravity
-    pelvisToPlatform = FreeJoint('PelvisToGround', ground, pelvis);
+    coordNames = strcat('Pelvis_',{'rx','ry','rz','tx','ty','tz'});
+    pelvisToPlatform = CustomFreeJoint('PelvisToGround', ground, pelvis, coordNames);
+    osimModel.addJoint(pelvisToPlatform)
 else
     pelvisToPlatform = FreeJoint('PelvisToPlatform', platform, pelvis);
 end
 % Update the coordinates of the new joint
+
+% get editable version of the joint attached to the model
+pelvisToPlatform = osimModel.updJointSet().get('PelvisToGround');
+
 Pelvis_rx = pelvisToPlatform.upd_coordinates(0); % Rotation about x
 Pelvis_rx.setRange([-pi, pi]);
-Pelvis_rx.setName('Pelvis_rx');
 Pelvis_rx.setDefaultValue(0);
 Pelvis_rx.setDefaultLocked(lockOffPlanar);
 
 Pelvis_ry = pelvisToPlatform.upd_coordinates(1); % Rotation about y
 Pelvis_ry.setRange([-pi, pi]);
-Pelvis_ry.setName('Pelvis_ry');
 Pelvis_ry.setDefaultValue(0);
 Pelvis_ry.setDefaultLocked(lockOffPlanar);
 
 Pelvis_rz = pelvisToPlatform.upd_coordinates(2); % Rotation about z
 Pelvis_rz.setRange([-pi, pi]);
-Pelvis_rz.setName('Pelvis_rz');
 Pelvis_rz.setDefaultValue(0);
 
 Pelvis_tx = pelvisToPlatform.upd_coordinates(3); % Translation along x
 Pelvis_tx.setRange([-10, 10]);
-Pelvis_tx.setName('Pelvis_tx');
 Pelvis_tx.setDefaultValue(-10);
 Pelvis_tx.setDefaultSpeedValue(initialSpeed)
 
 Pelvis_ty = pelvisToPlatform.upd_coordinates(4); % Translation along y
 Pelvis_ty.setRange([-5,5]);
-Pelvis_ty.setName('Pelvis_ty');
 Pelvis_ty.setDefaultValue(legLength+0.1);
 Pelvis_ty.setDefaultSpeedValue(0)
 
 Pelvis_tz = pelvisToPlatform.upd_coordinates(5); % Translation along z
 Pelvis_tz.setRange([-1,1]);
-Pelvis_tz.setName('Pelvis_tz');
 Pelvis_tz.setDefaultValue(0);
 Pelvis_tz.setDefaultSpeedValue(0)
 
+
 % Add Joint to model
-osimModel.addJoint(pelvisToPlatform)
+osimModel.initSystem();
 
 %% Add Hind Legs
 
