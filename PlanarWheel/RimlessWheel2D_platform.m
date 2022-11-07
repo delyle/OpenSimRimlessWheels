@@ -6,19 +6,19 @@ blankSlate
 import org.opensim.modeling.*
 
 %% Define key model variables
-modelName = 'PlanarRimlessPinWheel';
+modelName = 'PlanarRimlessWheel';
 pelvisWidth = 0.20;
 legLength = 0.50;
 legWidth = 0.05;
 torsoMass = 10;
 torsoLength = 1.5;
-contactSphereRadius = 0.05;
+contactSphereRadius = 0.025;
 rampHeightOffset = 5;
 
-nRightLegs = 2;
-nLeftLegs = 3;
-angleOffsetRight = 30;
-angleOffsetLeft = 60;
+nRightLegs = 12;
+nLeftLegs = 0;
+angleOffsetRight = 0;
+angleOffsetLeft = 0;
 
 % Define Contact Force Parameters
 stiffness           = 1000000;
@@ -130,16 +130,15 @@ angleOffset = angleOffsetRight;
 legAngle = 360/nLegs;
 hipPos = pelvisWidth;
 sidePrefix = 'rHind';
-newLegSet = true;
-RimlessWheel_addPinLegs
+RimlessWheel_addLegs
 
 % Make and add a Left Hind leg 1
 nLegs = nLeftLegs;
 legAngle = 360/nLegs;
 angleOffset = angleOffsetLeft;
-hipOffsetPos = -pelvisWidth;
+hipPos = -pelvisWidth;
 sidePrefix = 'lHind';
-RimlessWheel_addPinLegs
+RimlessWheel_addLegs
 
 %% Initialize the System (checks model consistency).
 osimModel.initSystem();

@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OpenSimDocument Version="40000">
+	<Model name="PlanarRimlessWheel">
+		<!--The model's ground reference frame.-->
+		<Ground name="ground">
+			<!--The geometry used to display the axes of this Frame.-->
+			<FrameGeometry name="frame_geometry">
+				<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+				<socket_frame>..</socket_frame>
+				<!--Scale factors in X, Y, Z directions respectively.-->
+				<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+			</FrameGeometry>
+		</Ground>
+		<!--Acceleration due to gravity, expressed in ground.-->
+		<gravity>0.85499783635452664 -9.7726699882800236 -0</gravity>
+		<!--List of bodies that make up this model.-->
+		<BodySet name="bodyset">
+			<objects>
+				<Body name="Pelvis">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Sphere name="Pelvis_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of sphere, defaults to 1.0-->
+							<radius>0.20000000000000001</radius>
+						</Sphere>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>1</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>1 1 1 0 0 0</inertia>
+				</Body>
+				<Body name="rHind1">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind1_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind2">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind2_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind3">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind3_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind4">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind4_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind5">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind5_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind6">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind6_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind7">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind7_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind8">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind8_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind9">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind9_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind10">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind10_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind11">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind11_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+				<Body name="rHind12">
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Cylinder name="rHind12_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Radius of cylinder.-->
+							<radius>0.025000000000000001</radius>
+							<!--Half-Height of cylinder.-->
+							<half_height>0.25</half_height>
+						</Cylinder>
+					</attached_geometry>
+					<!--The mass of the body (kg)-->
+					<mass>0.10000000000000001</mass>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0 0 0 0 0 0</inertia>
+				</Body>
+			</objects>
+			<groups />
+		</BodySet>
+		<!--List of joints that connect the bodies.-->
+		<JointSet name="jointset">
+			<objects>
+				<PlanarJoint name="PelvisToGround">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>/ground</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>/bodyset/Pelvis</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Pelvis_rz">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>-2.6906475646240509</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-3.1415926535897931 3.1415926535897931</range>
+						</Coordinate>
+						<Coordinate name="Pelvis_tx">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>1.4353080048173019</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-10 10</range>
+						</Coordinate>
+						<Coordinate name="Pelvis_ty">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0.52632457827316326</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0.024115741884305555</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-5 5</range>
+						</Coordinate>
+					</coordinates>
+				</PlanarJoint>
+				<WeldJoint name="rHind1ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind1_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind1_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind1</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind2ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind2_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0.52359877559829882</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind2_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind2</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind3ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind3_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 1.0471975511965976</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind3_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind3</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind4ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind4_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 1.5707963267948966</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind4_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind4</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind5ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind5_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 2.0943951023931953</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind5_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind5</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind6ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind6_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 2.6179938779914944</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind6_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind6</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind7ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind7_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 3.1415926535897931</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind7_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind7</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind8ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind8_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 -2.6179938779914944</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind8_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind8</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind9ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind9_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 -2.0943951023931962</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind9_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind9</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind10ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind10_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 -1.5707963267948968</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind10_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind10</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind11ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind11_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 -1.0471975511965976</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind11_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind11</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<WeldJoint name="rHind12ToPelvis">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>rHind12_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.20000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 -0.52359877559829937</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="rHind12_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/rHind12</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 -0.25 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+			</objects>
+			<groups />
+		</JointSet>
+		<!--Controllers that provide the control inputs for Actuators.-->
+		<ControllerSet name="controllerset">
+			<objects />
+			<groups />
+		</ControllerSet>
+		<!--Forces in the model (includes Actuators).-->
+		<ForceSet name="forceset">
+			<objects>
+				<SmoothSphereHalfSpaceForce name="rHind1Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind1Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind2Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind2Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind3Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind3Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind4Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind4Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind5Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind5Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind6Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind6Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind7Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind7Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind8Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind8Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind9Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind9Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind10Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind10Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind11Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind11Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind12Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind12Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
+					<transition_velocity>0.20000000000000001</transition_velocity>
+				</SmoothSphereHalfSpaceForce>
+			</objects>
+			<groups />
+		</ForceSet>
+		<!--Geometry to be used in contact forces.-->
+		<ContactGeometrySet name="contactgeometryset">
+			<objects>
+				<ContactHalfSpace name="GroundContact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/ground</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0 0</location>
+					<!--Orientation of geometry in the PhysicalFrame (body-fixed XYZ Euler angles).-->
+					<orientation>0 0 -1.5707963267948966</orientation>
+				</ContactHalfSpace>
+				<ContactSphere name="rHind1Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind1</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind2Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind2</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind3Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind3</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind4Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind4</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind5Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind5</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind6Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind6</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind7Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind7</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind8Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind8</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind9Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind9</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind10Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind10</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind11Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind11</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+				<ContactSphere name="rHind12Contact">
+					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
+					<socket_frame>/bodyset/rHind12</socket_frame>
+					<!--Location of geometry center in the PhysicalFrame.-->
+					<location>0 0.25 0</location>
+					<!--Radius of the sphere (default: 0).-->
+					<radius>0.025000000000000001</radius>
+				</ContactSphere>
+			</objects>
+			<groups />
+		</ContactGeometrySet>
+	</Model>
+</OpenSimDocument>

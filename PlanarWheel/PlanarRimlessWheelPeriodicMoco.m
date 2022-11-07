@@ -1,4 +1,4 @@
-function RimlessWheelPeriodicMoco(fName,finalAngle)
+function PlanarRimlessWheelPeriodicMoco(fName,finalAngle)
 import org.opensim.modeling.*
 
 osimModel = Model(fName);
@@ -6,13 +6,13 @@ osimModel = Model(fName);
 
 % Create a MocoStudy
 study = MocoStudy();
-study.setName('PeriodicRimless');
+study.setName('PeriodicPlanarRimless');
 problem = study.updProblem();% Define the OCP
 problem.setModel(osimModel);
 
 % Specify bounds
 % time starts at 0, can go up to 3
-problem.setTimeBounds(MocoInitialBounds(0.),MocoFinalBounds(0.001, 1));
+problem.setTimeBounds(MocoInitialBounds(0.),MocoFinalBounds(0.1, 1));
 
 p2g = '/jointset/PelvisToGround/Pelvis_';
 problem.setStateInfo([p2g,'tx/value'],[0 5],[0],[0 5]);
@@ -25,11 +25,11 @@ problem.setStateInfo('/jointset/PelvisToGround/Pelvis_rz/value',sort([0 finalAng
 
 
 % Cost, minimize periodicity residuals
-
 periodicityGoal = MocoPeriodicityGoal('periodicityGoal');
+periodicityGoal.setMode('cost');
 problem.addGoal(periodicityGoal);
 
-periodicCoordList = {'rx','ry','ty','tz'};
+periodicCoordList = {'ty'};
 for iRange = 1:length(periodicCoordList)
     c = [p2g,periodicCoordList{iRange},'/value'];
     dc = [p2g,periodicCoordList{iRange},'/speed'];
@@ -38,15 +38,16 @@ for iRange = 1:length(periodicCoordList)
 end
 % add periodicity for speed
 periodicityGoal.addStatePair(MocoPeriodicityGoalPair([p2g,'tx','/speed']));
-
+periodicityGoal.addStatePair(MocoPeriodicityGoalPair([p2g,'rz','/speed']));
 
 % Configure Solver
 solver = study.initCasADiSolver();
 solver.set_num_mesh_intervals(15);
-solver.setGuessFile('3DRimlessWheel_planarCycle.sto')
-
+%solver.set_optim_convergence_tolerance(1e-3);
+%solver.set_optim_constraint_tolerance(1e-3);
+solver.setGuessFile([strrep(fName,'.osim',''),'_Cycle.sto']);
 solution = study.solve();
 
 solution.unseal();
-solution.write('RimlessWheelPeriodic.sto');
+solution.write('PlanarRimlessWheelPeriodic.sto');
 study.visualize(solution);

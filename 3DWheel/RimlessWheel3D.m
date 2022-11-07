@@ -14,14 +14,14 @@ torsoMass = 10;
 torsoLength = 1.5;
 contactSphereRadius = 0.025;
 rampHeightOffset = 5;
-rampInitialAngle = -10; % in degrees.
+rampInitialAngle = -2.5; % in degrees.
 
 reorientGravity = true; % if true, there is no platform joint. Gravity is reoriented according to the platform angle.
 lockOffPlanar = false; % if true, extra DOF that aren't in the sagittal plane are locked.
 
-nRightLegs = 12;
-nLeftLegs = 12;
-angleOffsetRight = 0;
+nRightLegs = 6;
+nLeftLegs = 6;
+angleOffsetRight = 30;
 angleOffsetLeft = 0;
 
 initialSpeed = 0.1;

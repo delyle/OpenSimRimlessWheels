@@ -7,8 +7,12 @@ end
 
 S = readlines(fname);
 if replaceHeader
-    iHeaderEnd = strcmp(S,"endheader");
+    iHeaderEnd = find(strcmp(S,"endheader"),1);
     S(1:iHeaderEnd-1) = [];
+    if ischar(replaceHeader) && strcmpi(replaceHeader,'delete')
+        % delete the header completely
+        S(1) = []; 
+    end
 end
 
 S = [newHeader;S];

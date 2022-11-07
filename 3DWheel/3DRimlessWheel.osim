@@ -12,7 +12,7 @@
 			</FrameGeometry>
 		</Ground>
 		<!--Acceleration due to gravity, expressed in ground.-->
-		<gravity>1.7034886229125867 -9.6609640570497604 -0</gravity>
+		<gravity>0.4279061900539462 -9.8006630537180257 -0</gravity>
 		<!--List of bodies that make up this model.-->
 		<BodySet name="bodyset">
 			<objects>
@@ -332,18 +332,18 @@
 		<!--List of joints that connect the bodies.-->
 		<JointSet name="jointset">
 			<objects>
-				<FreeJoint name="PelvisToGround">
+				<CustomJoint name="PelvisToGround">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
-					<socket_parent_frame>/ground</socket_parent_frame>
+					<socket_parent_frame>ground_offset</socket_parent_frame>
 					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
-					<socket_child_frame>/bodyset/Pelvis</socket_child_frame>
+					<socket_child_frame>Pelvis_offset</socket_child_frame>
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
 						<Coordinate name="Pelvis_rx">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>-4.5482213767424899e-17</default_value>
+							<default_value>-1.3928524686979365e-16</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>-5.7504464007004032e-16</default_speed_value>
+							<default_speed_value>-4.7776684915939335e-17</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-3.1415926535897931 3.1415926535897931</range>
 							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
@@ -351,9 +351,9 @@
 						</Coordinate>
 						<Coordinate name="Pelvis_ry">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>1.5923274792096539e-16</default_value>
+							<default_value>-3.0290092011142561e-18</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>-9.7537012662296371e-17</default_speed_value>
+							<default_speed_value>-3.2956342368415116e-19</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-3.1415926535897931 3.1415926535897931</range>
 							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
@@ -363,7 +363,7 @@
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
 							<default_value>0</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>-3.1900551633040091</default_speed_value>
+							<default_speed_value>-1.3301199083351414</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-3.1415926535897931 3.1415926535897931</range>
 						</Coordinate>
@@ -371,28 +371,126 @@
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
 							<default_value>0</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>1.7221171466194403</default_speed_value>
+							<default_speed_value>0.70164385110866523</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-10 10</range>
 						</Coordinate>
 						<Coordinate name="Pelvis_ty">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>0.52606814959834192</default_value>
+							<default_value>0.52180419510749521</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>0.15160503473380829</default_speed_value>
+							<default_speed_value>0.022328699793041473</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-5 5</range>
 						</Coordinate>
 						<Coordinate name="Pelvis_tz">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>4.0878119139245839e-31</default_value>
+							<default_value>2.1132921389360542e-32</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>4.1533308067153359e-31</default_speed_value>
+							<default_speed_value>1.5674385793510388e-32</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-1 1</range>
 						</Coordinate>
 					</coordinates>
-				</FreeJoint>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="ground_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/ground</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="Pelvis_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/Pelvis</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+					<!--Defines how the child body moves with respect to the parent as a function of the generalized coordinates.-->
+					<SpatialTransform>
+						<!--3 Axes for rotations are listed first.-->
+						<TransformAxis name="rotation1">
+							<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+							<coordinates>Pelvis_rx</coordinates>
+							<!--Rotation or translation axis for the transform.-->
+							<axis>1 0 0</axis>
+							<!--Transform function of the generalized coordinates used to        represent the amount of displacement along a specified axis.-->
+							<LinearFunction name="function">
+								<coefficients> 1 0</coefficients>
+							</LinearFunction>
+						</TransformAxis>
+						<TransformAxis name="rotation2">
+							<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+							<coordinates>Pelvis_ry</coordinates>
+							<!--Rotation or translation axis for the transform.-->
+							<axis>0 1 0</axis>
+							<!--Transform function of the generalized coordinates used to        represent the amount of displacement along a specified axis.-->
+							<LinearFunction name="function">
+								<coefficients> 1 0</coefficients>
+							</LinearFunction>
+						</TransformAxis>
+						<TransformAxis name="rotation3">
+							<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+							<coordinates>Pelvis_rz</coordinates>
+							<!--Rotation or translation axis for the transform.-->
+							<axis>0 0 1</axis>
+							<!--Transform function of the generalized coordinates used to        represent the amount of displacement along a specified axis.-->
+							<LinearFunction name="function">
+								<coefficients> 1 0</coefficients>
+							</LinearFunction>
+						</TransformAxis>
+						<!--3 Axes for translations are listed next.-->
+						<TransformAxis name="translation1">
+							<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+							<coordinates>Pelvis_tx</coordinates>
+							<!--Rotation or translation axis for the transform.-->
+							<axis>1 0 0</axis>
+							<!--Transform function of the generalized coordinates used to        represent the amount of displacement along a specified axis.-->
+							<LinearFunction name="function">
+								<coefficients> 1 0</coefficients>
+							</LinearFunction>
+						</TransformAxis>
+						<TransformAxis name="translation2">
+							<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+							<coordinates>Pelvis_ty</coordinates>
+							<!--Rotation or translation axis for the transform.-->
+							<axis>0 1 0</axis>
+							<!--Transform function of the generalized coordinates used to        represent the amount of displacement along a specified axis.-->
+							<LinearFunction name="function">
+								<coefficients> 1 0</coefficients>
+							</LinearFunction>
+						</TransformAxis>
+						<TransformAxis name="translation3">
+							<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+							<coordinates>Pelvis_tz</coordinates>
+							<!--Rotation or translation axis for the transform.-->
+							<axis>0 0 1</axis>
+							<!--Transform function of the generalized coordinates used to        represent the amount of displacement along a specified axis.-->
+							<LinearFunction name="function">
+								<coefficients> 1 0</coefficients>
+							</LinearFunction>
+						</TransformAxis>
+					</SpatialTransform>
+				</CustomJoint>
 				<WeldJoint name="rHind1ToPelvis">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>Pelvis_offset</socket_parent_frame>
@@ -872,234 +970,222 @@
 		<!--Forces in the model (includes Actuators).-->
 		<ForceSet name="forceset">
 			<objects>
-				<HuntCrossleyForce name="rHind1Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>rHind1Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				<SmoothSphereHalfSpaceForce name="rHind1Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind1Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="rHind2Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>rHind2Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind2Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind2Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="rHind3Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>rHind3Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind3Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind3Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="rHind4Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>rHind4Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind4Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind4Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="rHind5Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>rHind5Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind5Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind5Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="rHind6Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>rHind6Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="rHind6Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/rHind6Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="lHind1Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>lHind1Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="lHind1Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/lHind1Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="lHind2Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>lHind2Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="lHind2Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/lHind2Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="lHind3Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>lHind3Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="lHind3Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/lHind3Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="lHind4Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>lHind4Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="lHind4Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/lHind4Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="lHind5Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>lHind5Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="lHind5Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/lHind5Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
-				<HuntCrossleyForce name="lHind6Force">
-					<!--Material properties.-->
-					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
-						<objects>
-							<HuntCrossleyForce::ContactParameters>
-								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>lHind6Contact GroundContact</geometry>
-								<stiffness>1000000</stiffness>
-								<dissipation>2</dissipation>
-								<static_friction>0.80000000000000004</static_friction>
-								<dynamic_friction>0.40000000000000002</dynamic_friction>
-								<viscous_friction>0.40000000000000002</viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups />
-					</HuntCrossleyForce::ContactParametersSet>
-					<!--Slip velocity (creep) at which peak static friction occurs.-->
+				</SmoothSphereHalfSpaceForce>
+				<SmoothSphereHalfSpaceForce name="lHind6Force">
+					<!--Path to a Component that satisfies the Socket 'sphere' of type ContactSphere (description: The sphere participating in this contact.).-->
+					<socket_sphere>/contactgeometryset/lHind6Contact</socket_sphere>
+					<!--Path to a Component that satisfies the Socket 'half_space' of type ContactHalfSpace (description: The half-space participating in this contact.).-->
+					<socket_half_space>/contactgeometryset/GroundContact</socket_half_space>
+					<!--The stiffness constant (i.e., plain strain modulus), default is 1 (N/m^2)-->
+					<stiffness>1000000</stiffness>
+					<!--The dissipation coefficient, default is 0 (s/m).-->
+					<dissipation>2</dissipation>
+					<!--The coefficient of static friction, default is 0.-->
+					<static_friction>0.80000000000000004</static_friction>
+					<!--The coefficient of dynamic friction, default is 0.-->
+					<dynamic_friction>0.40000000000000002</dynamic_friction>
+					<!--The coefficient of viscous friction, default is 0.-->
+					<viscous_friction>0.40000000000000002</viscous_friction>
+					<!--The transition velocity, default is 0.01 (m/s).-->
 					<transition_velocity>0.20000000000000001</transition_velocity>
-				</HuntCrossleyForce>
+				</SmoothSphereHalfSpaceForce>
 			</objects>
 			<groups />
 		</ForceSet>

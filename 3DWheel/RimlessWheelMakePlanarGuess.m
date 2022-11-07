@@ -58,32 +58,22 @@ for i  = 1:length(fields)
    Data.(fields{i}) = Data.(fields{i})(iTarget(1):iTarget(2));
 end
 
-% create new table just over the cyclical guess
-table = osimTableFromStruct(Data);
+% overwrite simData.data for conversion to .sto
+simData.data = Data;
 
-% cycle through table and change column headers
-nLabels = table.getNumColumns();
-for i = 0:nLabels-1
-    curLabel = char(table.getColumnLabel(i));
-    newLabel = simData.columnLabels.(curLabel);
-    table.setColumnLabel(i,newLabel);
-end
-
-% save .sto
-stofiles = STOFileAdapter();
-savename = [strrep(fNameNew,'.osim',''),'_planarCycle.sto'];
-fprintf('Writing table to %s\n',savename)
-stofiles.write(table, savename);
-
-% rewrite so that header includes number of states
+% write header to be moco-compatible
 mocoHeader = [...
+    "inDegrees=no";
     "num_controls=0";
     "num_derivatives=0";
     "num_multipliers=0";
     "num_parameters=0";
     "num_slacks=0";
-    "num_states=12"];
-updateHeader(savename,mocoHeader);
+    "num_states=12";
+    "DataType=double";
+    "version=3";
+    string(['OpenSimVersion=',char(opensimCommon.GetVersion())])];
+simDataToMocoSTO(strrep(fName,'.osim','_planarCycle.sto'),simData,mocoHeader)
 
 fprintf('Done\n')
 
