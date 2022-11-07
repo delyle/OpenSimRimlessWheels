@@ -78,7 +78,7 @@ Pelvis_rz.setDefaultValue(0);
 Pelvis_tx = pelvisToGround.upd_coordinates(1); % T about x
 Pelvis_tx.setRange([-10, 10]);
 Pelvis_tx.setName('Pelvis_tx');
-Pelvis_tx.setDefaultValue(-10);
+Pelvis_tx.setDefaultValue(0);
 Pelvis_tx.setDefaultSpeedValue(0)
 
 Pelvis_ty = pelvisToGround.upd_coordinates(2); % Translation about y

@@ -6,6 +6,6 @@ fName = 'PlanarRimlessWheel.osim';
 % forward simulation
 finalAngle = pi/6;
 
-PlanarRimlessWheelMakeGuess(fName,finalAngle);
+%PlanarRimlessWheelMakeGuess(fName,finalAngle);
 
 PlanarRimlessWheelPeriodicMoco(fName,-finalAngle)

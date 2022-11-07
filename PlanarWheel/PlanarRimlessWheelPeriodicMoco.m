@@ -45,9 +45,23 @@ solver = study.initCasADiSolver();
 solver.set_num_mesh_intervals(15);
 %solver.set_optim_convergence_tolerance(1e-3);
 %solver.set_optim_constraint_tolerance(1e-3);
-solver.setGuessFile([strrep(fName,'.osim',''),'_Cycle.sto']);
+solver.setGuessFile('PlanarRimlessWheelPeriodic.sto');%([strrep(fName,'.osim',''),'_Cycle.sto']);
 solution = study.solve();
 
 solution.unseal();
 solution.write('PlanarRimlessWheelPeriodic.sto');
+
+% Extract ground reaction forces
+% ==============================
+contact_r = StdVectorString();
+contact_l = StdVectorString();
+contact_r.add('/forceset/rHind7Force');
+contact_l.add('/forceset/rHind8Force');
+
+externalForcesTableFlat = opensimMoco.createExternalLoadsTableForGait(osimModel, ...
+                                 solution,contact_r,contact_l);
+STOFileAdapter.write(externalForcesTableFlat, ...
+                             'PlanarRimlessWheelPeriodicGRF.sto');
+
+% Animate solution in the visualizer
 study.visualize(solution);
