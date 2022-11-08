@@ -12,6 +12,10 @@ legLength = 0.50;
 legWidth = 0.05;
 torsoMass = 10;
 torsoLength = 1.5;
+torsoMOI = [1 1 1]; %x, y, z
+legMass = 0;
+
+
 contactSphereRadius = 0.025;
 rampHeightOffset = 5;
 rampInitialAngle = -2.5; % in degrees.
@@ -113,6 +117,15 @@ end
 
 %%
 % Make and add a Pelvis Body
+
+% calculate Mass of body inclusive of legs
+
+totalMass = torsoMass+(nRightLegs+nLeftLegs)*legMass;
+
+
+% calculate MOI for body inclusive of legs
+
+
 pelvis = Body();
 pelvis.setName('Pelvis');
 pelvis.setMass(1);
@@ -151,7 +164,7 @@ Pelvis_rz.setDefaultValue(0);
 
 Pelvis_tx = pelvisToPlatform.upd_coordinates(3); % Translation along x
 Pelvis_tx.setRange([-10, 10]);
-Pelvis_tx.setDefaultValue(-10);
+Pelvis_tx.setDefaultValue(0);
 Pelvis_tx.setDefaultSpeedValue(initialSpeed)
 
 Pelvis_ty = pelvisToPlatform.upd_coordinates(4); % Translation along y

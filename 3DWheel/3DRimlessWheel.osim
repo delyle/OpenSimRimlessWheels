@@ -58,7 +58,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -82,7 +82,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -106,7 +106,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -130,7 +130,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -154,7 +154,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -178,7 +178,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -202,7 +202,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -226,7 +226,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -250,7 +250,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -274,7 +274,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -298,7 +298,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -322,7 +322,7 @@
 						</Cylinder>
 					</attached_geometry>
 					<!--The mass of the body (kg)-->
-					<mass>0.10000000000000001</mass>
+					<mass>0</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0 0 0 0 0 0</inertia>
 				</Body>
@@ -341,9 +341,9 @@
 					<coordinates>
 						<Coordinate name="Pelvis_rx">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>-1.3928524686979365e-16</default_value>
+							<default_value>0</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>-4.7776684915939335e-17</default_speed_value>
+							<default_speed_value>0</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-3.1415926535897931 3.1415926535897931</range>
 							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
@@ -351,9 +351,9 @@
 						</Coordinate>
 						<Coordinate name="Pelvis_ry">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>-3.0290092011142561e-18</default_value>
+							<default_value>0</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>-3.2956342368415116e-19</default_speed_value>
+							<default_speed_value>0</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-3.1415926535897931 3.1415926535897931</range>
 							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
@@ -363,7 +363,7 @@
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
 							<default_value>0</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>-1.3301199083351414</default_speed_value>
+							<default_speed_value>-0.85981439468983123</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-3.1415926535897931 3.1415926535897931</range>
 						</Coordinate>
@@ -371,23 +371,23 @@
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
 							<default_value>0</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>0.70164385110866523</default_speed_value>
+							<default_speed_value>0.45678809514429369</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-10 10</range>
 						</Coordinate>
 						<Coordinate name="Pelvis_ty">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>0.52180419510749521</default_value>
+							<default_value>0.52389224319128802</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>0.022328699793041473</default_speed_value>
+							<default_speed_value>0.0044235578477731727</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-5 5</range>
 						</Coordinate>
 						<Coordinate name="Pelvis_tz">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>2.1132921389360542e-32</default_value>
+							<default_value>0</default_value>
 							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
-							<default_speed_value>1.5674385793510388e-32</default_speed_value>
+							<default_speed_value>0</default_speed_value>
 							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
 							<range>-1 1</range>
 						</Coordinate>

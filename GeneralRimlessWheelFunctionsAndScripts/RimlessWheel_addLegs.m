@@ -4,7 +4,7 @@ for i = 1:nLegs
     jointname = [bodyname,'ToPelvis'];
     LegS.(bodyname) = Body();
     LegS.(bodyname).setName(bodyname);
-    LegS.(bodyname).setMass(0.1);
+    LegS.(bodyname).setMass(legMass);
     LegS.(bodyname).setInertia(Inertia(0,0,0,0,0,0));
     % Add geometry for display
     LegS.(bodyname).attachGeometry(Cylinder(legWidth/2,cylLength));
