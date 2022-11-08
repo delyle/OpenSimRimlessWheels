@@ -10,9 +10,9 @@ modelName = '3DRimlessWheel';
 pelvisRadius = 0.20;
 legLength = 0.50;
 legWidth = 0.05;
-torsoMass = 10+0.1*12;
+torsoMass = 10;
 torsoLength = 1.5;
-torsoMOI = [1 1 1]+[(legLength/2)^2*0.1*12]; %x, y, z
+torsoMOI = [1 1 1]; %x, y, z
 legMass = 0;
 
 
