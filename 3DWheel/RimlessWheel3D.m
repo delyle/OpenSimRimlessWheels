@@ -7,12 +7,12 @@ import org.opensim.modeling.*
 
 %% Define key model variables
 modelName = '3DRimlessWheel';
-pelvisWidth = 0.20;
+pelvisRadius = 0.20;
 legLength = 0.50;
 legWidth = 0.05;
-torsoMass = 10;
+torsoMass = 10+0.1*12;
 torsoLength = 1.5;
-torsoMOI = [1 1 1]; %x, y, z
+torsoMOI = [1 1 1]+[(legLength/2)^2*0.1*12]; %x, y, z
 legMass = 0;
 
 
@@ -131,7 +131,7 @@ pelvis.setName('Pelvis');
 pelvis.setMass(1);
 pelvis.setInertia(Inertia(1,1,1,0,0,0));
 % Add geometry for display
-pelvis.attachGeometry(Sphere(pelvisWidth));
+pelvis.attachGeometry(Sphere(pelvisRadius));
 % Add Body to the Model
 osimModel.addBody(pelvis);
 
@@ -189,7 +189,7 @@ osimModel.initSystem();
 nLegs = nRightLegs;
 angleOffset = angleOffsetRight;
 legAngle = 360/nLegs;
-hipPos = pelvisWidth;
+hipPos = pelvisRadius;
 sidePrefix = 'rHind';
 RimlessWheel_addLegs
 
@@ -197,7 +197,7 @@ RimlessWheel_addLegs
 nLegs = nLeftLegs;
 legAngle = 360/nLegs;
 angleOffset = angleOffsetLeft;
-hipPos = -pelvisWidth;
+hipPos = -pelvisRadius;
 sidePrefix = 'lHind';
 RimlessWheel_addLegs
 
