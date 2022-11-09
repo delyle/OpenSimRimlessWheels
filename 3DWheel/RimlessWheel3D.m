@@ -18,6 +18,7 @@ rampInitialAngle = -2.5; % in degrees.
 
 reorientGravity = true; % if true, there is no platform joint. Gravity is reoriented according to the platform angle.
 lockOffPlanar = false; % if true, extra DOF that aren't in the sagittal plane are locked.
+visualizeModel = true; % if true, model shown in visualizer window. This will block until the user exits the visualizer window
 
 nRightLegs = 6;
 nLeftLegs = 6;
@@ -85,7 +86,7 @@ if ~reorientGravity
     platform_rz = platformToGround.upd_coordinates(0);
     platform_rz.setRange([deg2rad(-100), deg2rad(100)]);
     platform_rz.setName('platform_rz');
-    platform_rz.setDefaultValue(deg2rad(-10));
+    platform_rz.setDefaultValue(deg2rad(rampInitialAngle));
     platform_rz.setDefaultSpeedValue(0);
     platform_rz.setDefaultLocked(true)
     
@@ -195,3 +196,9 @@ osimModel.initSystem();
 fname = [modelName,'.osim'];
 osimModel.print(fname);
 disp([fname,' printed!']);
+
+% visualize the model
+
+if visualizeModel
+   VisualizerUtilities().showModel(osimModel) 
+end
